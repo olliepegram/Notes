@@ -6,11 +6,11 @@ let restraunt = {
     let seatsLeft = this.guestCapacity - this.guestCount;
     return partySize <= seatsLeft;
   },
-  seatParty: function (amount) {
-    this.guestCount = this.guestCount + amount;
+  seatParty: function (partySize) {
+    this.guestCount += partySize;
   },
-  removeParty: function (amount) {
-    this.guestCount = this.guestCount - amount;
+  removeParty: function(partySize) {
+     this.guestCount -= partySize;
   }
 }
 
@@ -18,3 +18,5 @@ restraunt.seatParty(72);
 console.log(restraunt.checkAvailability(4));
 restraunt.removeParty(5);
 console.log(restraunt.checkAvailability(4));
+
+

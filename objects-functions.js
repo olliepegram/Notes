@@ -10,26 +10,26 @@ let otherBook = {
   pageCount: 723
 }
 
-let getSummary = function (book) {
+let getSummary = function(book) {
   return {
     summary: `${book.title} by ${book.author}`,
-    pageCountSumary: `${book.title} is ${book.pageCount} pages long`
+    pageCountSummary: `${book.title} is ${book.pageCount} pages long`
   }
 }
 
-let bookSummary = getSummary(myBook)
-let otherBookSummary = getSummary(otherBook)
+let bookSummary = getSummary(myBook);
+let otherBookSummary = getSummary(otherBook);
 
-console.log(bookSummary.summary)
+console.log(bookSummary.pageCountSummary);
 
-let convert = function (fah) {
+let conversion = (fahrenheit) => {
+  let celsius = Math.floor((fahrenheit - 32) * 5/9);
+  let kelvin = Math.floor((fahrenheit + 459.67) * 5/9);
   return {
-    fah: fah,
-    kelvin: (fah + 459.67) * (5 / 9),
-    celcius: (fah - 32) * (5 / 9)
+    celsius: `F to C is ${celsius}`,
+    kelvin: `F to K is ${kelvin}`
   }
 }
 
-let printConvert = convert(32)
-
-console.log(printConvert)
+let printConversion = conversion(89);
+console.log(printConversion);
